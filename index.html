@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mulago Bright Standard Primary School</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/1600x900/?school,children') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffd700;
+      color: #003366;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ffcc00;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.2em;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #e8f4f8;
+    }
+
+    /* Curriculum */
+    .curriculum {
+      background-color: #fff;
+    }
+
+    .subjects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .subject {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* School Life */
+    .life {
+      background-color: #f0f7e6;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Gallery */
+    .gallery {
+      background-color: #fafafa;
+    }
+
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .photo {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Admissions */
+    .admissions {
+      background-color: #fff3e0;
+    }
+
+    /* Contact */
+    .contact {
+      background-color: #f3e8ff;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #003366;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 2em;
+      }
+      .subjects, .features {
+        flex-direction: column;
+        align-items: center;
+      }
+      .subject, .feature {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <div class="logo">Mulago Bright Standard Primary School</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
+          <li><a href="#life">School Life</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Our Bright Future</h1>
+    <p>A nurturing, joyful, and excellent primary education for day and boarding pupils from P.1 to P.7 in the heart of Mulago, Kampala.</p>
+    <a href="#admissions" class="btn">Enroll Now</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Mulago Bright Standard Primary School is a caring and disciplined learning environment dedicated to academic excellence, moral development, and holistic growth. Founded in 2010, we provide quality UPE-standard education with optional safe boarding for pupils who need it.</p>
+      <p>Our mission is to build confident, kind, and capable learners ready for secondary education and life.</p>
+    </div>
+  </section>
+
+  <!-- Curriculum Section -->
+  <section class="curriculum" id="curriculum">
+    <div class="container">
+      <h2>Our Curriculum</h2>
+      <p>We follow the Ugandan National Curriculum (UPE) with a focus on strong foundations in literacy, numeracy, science, and values. We also emphasize creativity, music, and physical education.</p>
+      <div class="subjects">
+        <div class="subject">English</div>
+        <div class="subject">Mathematics</div>
+        <div class="subject">Science</div>
+        <div class="subject">Social Studies</div>
+        <div class="subject">Religious Education</div>
+        <div class="subject">Creative Arts</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School Life Section -->
+  <section class="life" id="life">
+    <div class="container">
+      <h2>School & Boarding Life</h2>
+      <p>Our students enjoy a balanced day of learning, play, and personal growth. For boarding pupils, we offer a safe, clean, and loving home away from home.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>🏫 Day School</h3>
+          <p>8:00 AM – 4:00 PM | Transport available</p>
+        </div>
+        <div class="feature">
+          <h3>🛏️ Boarding</h3>
+          <p>Safe dorms, meals, study time, and care</p>
+        </div>
+        <div class="feature">
+          <h3>⚽ Sports & Clubs</h3>
+          <p>Football, netball, music, drama, and more</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2>Photo Gallery</h2>
+      <p>See our happy learners in action!</p>
+      <div class="photos">
+        <img src="https://source.unsplash.com/random/300x200/?classroom" alt="Classroom" class="photo">
+        <img src="https://source.unsplash.com/random/300x200/?children,learning" alt="Learning" class="photo">
+        <img src="https://source.unsplash.com/random/300x200/?school,sports" alt="Sports" class="photo">
+        <img src="https://source.unsplash.com/random/300x200/?dorm,children" alt="Boarding" class="photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Section -->
+  <section class="admissions" id="admissions">
+    <div class="container">
+      <h2>Admissions</h2>
+      <p>We accept new pupils from P.1 to P.7. Both day and boarding options are available. Admissions are open year-round, with new terms starting in January, May, and September.</p>
+      <p><strong>Documents Required:</strong> Birth certificate, transfer letter (if applicable), 4 passport photos, parent ID.</p>
+      <a href="mailto:info@mulagobright.org" class="btn">Apply by Email</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Visit or reach out using the details below.</p>
+      <div class="contact-info">
+        <p>📍 <strong>Location:</strong> Mulago, Kampala, Uganda</p>
+        <p>📞 <strong>Phone:</strong> +256 700 123 456</p>
+        <p>📱 <strong>WhatsApp:</strong> +256 777 123 456</p>
+        <p>📧 <strong>Email:</strong> info@mulagobright.org</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mulago Bright Standard Primary School. All rights reserved.</p>
+      <p>Designed with care for bright young minds.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
