@@ -1,479 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mulago Bright Standard Primary School</title>
-  <style>
-    /* General Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulago Bright Standard Primary School</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #1a5276;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #2874a6;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: #1a5276;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #1a5276;
+            border-bottom: 2px solid #aed6f1;
+            padding-bottom: 0.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1a5276;
+            color: white;
+            margin-top: 2rem;
+        }
+        .urgent-news {
+            background: #fdecea;
+            border-left: 5px solid #c0392b;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .team-member {
+            display: inline-block;
+            width: 200px;
+            margin: 15px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
 
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Header & Navigation */
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/1600x900/?school,children') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #ffd700;
-      color: #003366;
-      padding: 12px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #ffcc00;
-    }
-
-    /* Section Styles */
-    section {
-      padding: 60px 0;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 2.2em;
-      color: #003366;
-      margin-bottom: 20px;
-    }
-
-    section p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1em;
-    }
-
-    /* About Section */
-    .about {
-      background-color: #e8f4f8;
-    }
-
-    /* Curriculum */
-    .curriculum {
-      background-color: #fff;
-    }
-
-    .subjects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .subject {
-      background-color: #e3f2fd;
-      padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* School Life */
-    .life {
-      background-color: #f0f7e6;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .feature {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    /* Administration / Team Section */
-    .administration {
-      background-color: #f0f8ff;
-    }
-
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .team-member {
-      text-align: center;
-      width: 180px;
-    }
-
-    .team-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ffd700;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .team-name {
-      font-weight: bold;
-      color: #003366;
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-
-    .team-role {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* Gallery */
-    .gallery {
-      background-color: #fafafa;
-    }
-
-    .photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .photo {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* Admissions */
-    .admissions {
-      background-color: #fff3e0;
-    }
-
-    /* Contact */
-    .contact {
-      background-color: #f3e8ff;
-    }
-
-    .contact-info {
-      margin-top: 20px;
-      font-size: 1.2em;
-      color: #003366;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9em;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .hero h1 {
-        font-size: 2em;
-      }
-      .subjects, .features {
-        flex-direction: column;
-        align-items: center;
-      }
-      .subject, .feature {
-        width: 100%;
-        max-width: 300px;
-      }
-      .team-member {
-        width: 140px;
-      }
-      .team-photo {
-        width: 120px;
-        height: 120px;
-      }
-    }
-  </style>
+        /* DEMOLITION GALLERY STYLES */
+        .demolition-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .demolition-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .demolition-item img,
+        .demolition-item video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .demolition-caption {
+            padding: 12px;
+            background: #f8f9fa;
+            font-weight: bold;
+            text-align: center;
+            color: #1a5276;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .section-subtitle {
+            font-style: italic;
+            color: #666;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header & Navigation -->
-  <header>
-    <div class="container">
-      <div class="logo">Mulago Bright Standard Primary School</div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#curriculum">Curriculum</a></li>
-          <li><a href="#life">School Life</a></li>
-          <li><a href="#administration">Administration</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#admissions">Admissions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <h1>Mulago Bright Standard Primary School</h1>
+        <p>Founded in 1998 by Mr. Mukose & Ester Mukose — Lighting Young Minds for Over Two Decades</p>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h1>Welcome to Our Bright Future</h1>
-    <p>A nurturing, joyful, and excellent primary education for day and boarding pupils from P.1 to P.7 in the heart of Mulago, Kampala.</p>
-    <a href="#admissions" class="btn">Enroll Now</a>
-  </section>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#administration">Administration</a>
+        <a href="#curriculum">School Curriculum</a>
+        <a href="#gallery">Sports & Drama Gallery</a>
+        <a href="#parents">Parents' Section</a>
+        <a href="#community">Community Impact</a>
+        <a href="#team">Meet Our Team</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#news">News</a>
+    </nav>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Mulago Bright Standard Primary School is a caring and disciplined learning environment dedicated to academic excellence, moral development, and holistic growth. Founded in 2010, we provide quality UPE-standard education with optional safe boarding for pupils who need it.</p>
-      <p>Our mission is to build confident, kind, and capable learners ready for secondary education and life.</p>
-    </div>
-  </section>
+    <main>
 
-  <!-- Curriculum Section -->
-  <section class="curriculum" id="curriculum">
-    <div class="container">
-      <h2>Our Curriculum</h2>
-      <p>We follow the Ugandan National Curriculum (UPE) with a focus on strong foundations in literacy, numeracy, science, and values. We also emphasize creativity, music, and physical education.</p>
-      <div class="subjects">
-        <div class="subject">English</div>
-        <div class="subject">Mathematics</div>
-        <div class="subject">Science</div>
-        <div class="subject">Social Studies</div>
-        <div class="subject">Religious Education</div>
-        <div class="subject">Creative Arts</div>
-      </div>
-    </div>
-  </section>
+        <!-- HOME SECTION -->
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to Mulago Bright Standard Primary School — a beacon of academic excellence and moral upbringing since 1998. Founded by visionary educators Mr. Mukose and Ester Mukose, our school has nurtured thousands of children in the heart of Mulago.</p>
+            <p>We believe in holistic education: blending academics, character, creativity, and community service.</p>
+        </section>
 
-  <!-- School Life Section -->
-  <section class="life" id="life">
-    <div class="container">
-      <h2>School & Boarding Life</h2>
-      <p>Our students enjoy a balanced day of learning, play, and personal growth. For boarding pupils, we offer a safe, clean, and loving home away from home.</p>
-      <div class="features">
-        <div class="feature">
-          <h3>🏫 Day School</h3>
-          <p>8:00 AM – 4:00 PM | Transport available</p>
-        </div>
-        <div class="feature">
-          <h3>🛏️ Boarding</h3>
-          <p>Safe dorms, meals, study time, and care</p>
-        </div>
-        <div class="feature">
-          <h3>⚽ Sports & Clubs</h3>
-          <p>Football, netball, music, drama, and more</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- ADMINISTRATION -->
+        <section id="administration">
+            <h2>Administration</h2>
+            <p>Our school is managed by a dedicated team of administrators committed to maintaining the highest standards of education and discipline.</p>
+            <ul>
+                <li><strong>Founder & Chairman:</strong> Mr. Mukose</li>
+                <li><strong>Co-Founder & Director of Welfare:</strong> Ester Mukose</li>
+                <li><strong>Head Teacher:</strong> Mrs. Sarah Nalwoga</li>
+                <li><strong>Deputy Head Teacher:</strong> Mr. David Kato</li>
+                <li><strong>Bursar:</strong> Mr. Joseph Mugerwa</li>
+            </ul>
+        </section>
 
-  <!-- Administration / Meet Our Team -->
-  <section class="administration" id="administration">
-    <div class="container">
-      <h2>Meet Our Team</h2>
-      <p>We are proud of our dedicated and professional staff who make Mulago Bright a special place for learning.</p>
+        <!-- CURRICULUM -->
+        <section id="curriculum">
+            <h2>School Curriculum</h2>
+            <p>Our curriculum is aligned with the National Curriculum Development Centre (NCDC) and enriched with creative, practical, and moral components.</p>
+            <ul>
+                <li>Literacy & Numeracy (P1-P4)</li>
+                <li>Science, Social Studies, and Christian Religious Education (P5-P7)</li>
+                <li>ICT Integration from P3</li>
+                <li>Life Skills and Environmental Education</li>
+                <li>Weekly Library & Reading Hours</li>
+            </ul>
+        </section>
 
-      <div class="team-grid">
-        <!-- Head Teacher -->
-        <div class="team-member">
-          <img src="images/patrick-mukose.jpg" alt="Mr. Patrick Mukose" class="team-photo">
-          <div class="team-name">Mr. Patrick Mukose</div>
-          <div class="team-role">Head Teacher & Founder</div>
-        </div>
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h2>Sports and Drama Activities</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300x200?text=Football+Match" alt="Football Match">
+                <img src="https://via.placeholder.com/300x200?text=Drama+Performance" alt="Drama Performance">
+                <img src="https://via.placeholder.com/300x200?text=Athletics+Day" alt="Athletics Day">
+                <img src="https://via.placeholder.com/300x200?text=Netball+Team" alt="Netball Team">
+                <img src="https://via.placeholder.com/300x200?text=Music+Festival" alt="Music Festival">
+                <img src="https://via.placeholder.com/300x200?text=Debate+Club" alt="Debate Club">
+            </div>
+        </section>
 
-        <!-- Deputy Head Teacher -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/e91e63/white?text=Esther+Mukose" alt="Mrs. Esther Mukose" class="team-photo">
-          <div class="team-name">Mrs. Esther Mukose</div>
-          <div class="team-role">Deputy Head Teacher</div>
-        </div>
+        <!-- PARENTS SECTION -->
+        <section id="parents">
+            <h2>Parents' Section</h2>
+            <p>Parents are vital partners in our mission. Here’s what some are saying:</p>
+            <blockquote>
+                <p>“My child has grown not just academically but in confidence and kindness. Thank you, Mulago Bright!” — <em>Mrs. Nakato, Parent of P6 pupil</em></p>
+            </blockquote>
+            <blockquote>
+                <p>“The Parent-Teacher Association meetings are very helpful. We’ve contributed books and helped paint classrooms.” — <em>Mr. Ssebunya, PTA Chair</em></p>
+            </blockquote>
+            <h3>How Parents Contribute:</h3>
+            <ul>
+                <li>Monthly PTA meetings and fundraising</li>
+                <li>Donation of learning materials and uniforms</li>
+                <li>Volunteering during sports days and drama festivals</li>
+                <li>Infrastructure support (painting, gardening, minor repairs)</li>
+            </ul>
+        </section>
 
-        <!-- Class Teacher 1 -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/3f51b5/white?text=Peter+Tumwine" alt="Mr. Peter Tumwine" class="team-photo">
-          <div class="team-name">Mr. Peter Tumwine</div>
-          <div class="team-role">Class Teacher</div>
-        </div>
+        <!-- COMMUNITY IMPACT -->
+        <section id="community">
+            <h2>Community Impact</h2>
+            <p>Mulago Bright School is more than an institution — it’s a community pillar.</p>
+            <ul>
+                <li>Hosts free adult literacy classes on weekends</li>
+                <li>Organizes neighborhood clean-up campaigns</li>
+                <li>Feeds over 50 vulnerable children daily through our “Bright Meals” program</li>
+                <li>Partners with local clinics for child immunization drives</li>
+                <li>Trains local youth in basic computer skills</li>
+            </ul>
+            <p>“This school saved my grandchildren. Now they eat, learn, and dream.” — <em>Grandma Nalubega, Community Elder</em></p>
+        </section>
 
-        <!-- Class Teacher 2 -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/f44336/white?text=Grace+Auma" alt="Ms. Grace Auma" class="team-photo">
-          <div class="team-name">Ms. Grace Auma</div>
-          <div class="team-role">Class Teacher</div>
-        </div>
+        <!-- MEET OUR TEAM -->
+        <section id="team">
+            <h2>Meet Our Team and Staff</h2>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200x200?text=Mr.+Mukose" alt="Mr. Mukose">
+                <h3>Mr. Mukose</h3>
+                <p>Founder & Chairman</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200x200?text=Ester+Mukose" alt="Ester Mukose">
+                <h3>Ester Mukose</h3>
+                <p>Co-Founder & Welfare Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200x200?text=Mrs.+Nalwoga" alt="Mrs. Nalwoga">
+                <h3>Mrs. Sarah Nalwoga</h3>
+                <p>Head Teacher</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200x200?text=Mr.+Kato" alt="Mr. Kato">
+                <h3>Mr. David Kato</h3>
+                <p>Deputy Head</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200x200?text=Ms.+Nakawunde" alt="Ms. Nakawunde">
+                <h3>Ms. Grace Nakawunde</h3>
+                <p>Senior Teacher (P5-P7)</p>
+            </div>
+        </section>
 
-        <!-- Specialist Teachers -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/4caf50/white?text=Kalungi+E." alt="Kalungi Edmond" class="team-photo">
-          <div class="team-name">Kalungi Edmond</div>
-          <div class="team-role">Music & ICT Teacher</div>
-        </div>
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Plot 45, Mulago Hill Road, Kampala, Uganda</p>
+            <p><strong>Phone:</strong> +256 700 123 456 | +256 752 987 654</p>
+            <p><strong>Email:</strong> info@mulagobrightschool.edu.ug</p>
+            <p><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
+            <p><strong>Follow Us:</strong> Facebook | Twitter | Instagram @MulagoBrightPS</p>
+        </section>
 
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/ff9800/white?text=James+Apolot" alt="James Apolot" class="team-photo">
-          <div class="team-name">James Apolot</div>
-          <div class="team-role">P.E. Teacher</div>
-        </div>
+        <!-- NEWS SECTION -->
+        <section id="news">
+            <h2>Latest News</h2>
 
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/9c27b0/white?text=Richard+Lutwama" alt="Richard Lutwama" class="team-photo">
-          <div class="team-name">Richard Lutwama</div>
-          <div class="team-role">Library Teacher</div>
-        </div>
+            <div class="urgent-news">
+                <h3 style="color: #c0392b;">🚨 URGENT: SCHOOL LAND INVASION & CLASSROOM DEMOLITION</h3>
+                <p><em>Published: Last Week</em></p>
+                <p>In a horrifying and unlawful act of violence against education, armed individuals wielding sledgehammers and crowbars — reportedly hired by a powerful local businessman with alleged ties to high-ranking government officials — invaded Mulago Bright Standard Primary School in broad daylight last week. Their target? Our children’s classroom.</p>
 
-        <!-- Support Staff -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/00bcd4/white?text=Anne+Kyomuhangi" alt="Anne Kyomuhangi" class="team-photo">
-          <div class="team-name">Anne Kyomuhangi</div>
-          <div class="team-role">School Nurse</div>
-        </div>
+                <p>Over the course of a single night, they demolished an entire classroom block housing our Primary 3 and Primary 4 pupils — reducing desks, books, and dreams to rubble. This was not vandalism. This was a calculated land grab, disguised as development, aimed at stealing the future of Uganda’s most vulnerable: our children.</p>
 
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/ff5722/white?text=Kalungi+Lutwama" alt="Kalungi Edmond Lutwama" class="team-photo">
-          <div class="team-name">Kalungi Edmond Lutwama</div>
-          <div class="team-role">IT Specialist & Secretary</div>
-        </div>
+                <p>Founder Mr. Mukose, who resides on the school premises, bravely attempted to intervene and repeatedly called the police for help. Shockingly, officers refused to respond, citing “orders from above.” The school community — teachers, parents, and students — stood by helplessly, watching their sanctuary of learning destroyed.</p>
 
-        <!-- PTA Chair -->
-        <div class="team-member">
-          <img src="https://placehold.co/150x150/795548/white?text=Robert+Ssebunya" alt="Mr. Robert Ssebunya" class="team-photo">
-          <div class="team-name">Mr. Robert Ssebunya</div>
-          <div class="team-role">PTA Chair</div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <p>The following day, Mr. Mukose was summoned by the Resident City Commissioner (RCC), who immediately ordered a halt to all demolition activities pending a full investigation. The RCC condemned the attack as “an assault on education and the future of our children” — a statement we welcome, but one that came too late to save our classrooms.</p>
 
-  <!-- Gallery Section -->
-  <section class="gallery" id="gallery">
-    <div class="container">
-      <h2>Photo Gallery</h2>
-      <p>See our happy learners in action!</p>
-      <div class="photos">
-        <img src="https://source.unsplash.com/random/300x200/?classroom" alt="Classroom" class="photo">
-        <img src="https://source.unsplash.com/random/300x200/?children,learning" alt="Learning" class="photo">
-        <img src="https://source.unsplash.com/random/300x200/?school,sports" alt="Sports" class="photo">
-        <img src="https://source.unsplash.com/random/300x200/?dorm,children" alt="Boarding" class="photo">
-      </div>
-    </div>
-  </section>
+                <p>This is not the first time Mr. Mukose has faced intimidation. He has previously been arrested and imprisoned for whole six months under dubious charges — clearly an effort to silence him. He now asks: Why did no one act when we cried for help? Why must justice only knock after destruction is complete?</p>
 
-  <!-- Admissions Section -->
-  <section class="admissions" id="admissions">
-    <div class="container">
-      <h2>Admissions</h2>
-      <p>We accept new pupils from P.1 to P.7. Both day and boarding options are available. Admissions are open year-round, with new terms starting in January, May, and September.</p>
-      <p><strong>Documents Required:</strong> Birth certificate, transfer letter (if applicable), 4 passport photos, parent ID.</p>
-      <a href="mailto:info@mulagobright.org" class="btn">Apply by Email</a>
-    </div>
-  </section>
+                <p>This is not just about bricks and mortar. It is about the right of every Ugandan child to learn in safety. It is about the rule of law. It is about whether wealth and connections can trample over the dreams of the innocent.</p>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>We'd love to hear from you! Visit or reach out using the details below.</p>
-      <div class="contact-info">
-        <p>📍 <strong>Location:</strong> Mulago, Kampala, Uganda</p>
-        <p>📞 <strong>Phone:</strong> +256 700 123 456</p>
-        <p>📱 <strong>WhatsApp:</strong> +256 777 123 456</p>
-        <p>📧 <strong>Email:</strong> info@mulagobright.org</p>
-      </div>
-    </div>
-  </section>
+                <h3 class="section-subtitle">📸 Before & After: P3-P4 Classroom Block</h3>
+                <div class="demolition-gallery">
+                    <div class="demolition-item">
+                        <img src="https://via.placeholder.com/400x300?text=Classroom+Before+Demolition+1" alt="Classroom Before Demolition 1">
+                        <div class="demolition-caption">Before: P3 Classroom — A Place of Learning</div>
+                    </div>
+                    <div class="demolition-item">
+                        <img src="https://via.placeholder.com/400x300?text=Classroom+Before+Demolition+2" alt="Classroom Before Demolition 2">
+                        <div class="demolition-caption">Before: P4 Classroom — Full of Young Minds</div>
+                    </div>
+                    <div class="demolition-item">
+                        <img src="https://via.placeholder.com/400x300?text=Classroom+After+Demolition+1" alt="Classroom After Demolition 1">
+                        <div class="demolition-caption">After: Destruction at Dawn</div>
+                    </div>
+                    <div class="demolition-item">
+                        <img src="https://via.placeholder.com/400x300?text=Classroom+After+Demolition+2" alt="Classroom After Demolition 2">
+                        <div class="demolition-caption">After: Rubble Where Desks Once Stood</div>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Mulago Bright Standard Primary School. All rights reserved.</p>
-      <p>Designed with care for bright young minds.</p>
-    </div>
-  </footer>
+                <h3 class="section-subtitle">📹 Eyewitness Video Footage</h3>
+                <div class="demolition-item">
+                    <div class="video-container">
+                        <video controls poster="https://via.placeholder.com/400x300?text=Video+Thumbnail+-+Demolition+Footage">
+                            <source src="https://youtu.be/dorKWuDTgXg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="demolition-caption">Eyewitness Video: The Night Our Classroom Was Destroyed</div>
+                </div>
+
+                <p><strong>Update:</strong> WE CALL FOR ACTION & SOLIDARITY</p>
+                <p>The School Administration, in partnership with parents and teachers, is now appealing to:</p>
+                <ul>
+                    <li>NGOs and Human Rights Organizations,</li>
+                    <li>Diplomatic Missions & Embassies,</li>
+                    <li>Education Advocates & Legal Partners,</li>
+                    <li>Media Houses & the General Public</li>
+                </ul>
+                <p>…to stand with us as we:</p>
+                <ol>
+                    <li>Demand justice for this violent land invasion and destruction of public educational infrastructure.</li>
+                    <li>Seek urgent intervention to secure the school’s land title and prevent further attacks.</li>
+                    <li>Rebuild our classrooms — not just physically, but morally and legally — so learning can resume without fear.</li>
+                </ol>
+                <p>Parents and teachers will hold a peaceful protest in the coming days to demand accountability and protection for our children.</p>
+
+                <p><strong>STAND WITH US</strong></p>
+                <p>This is not just Mulago Bright’s fight — it is Uganda’s fight. When a classroom is destroyed, a generation is endangered. We call upon all parents, alumni, faith leaders, and well-wishers to raise your voices, lend your hands, and protect the sacred space of learning.</p>
+                <p>For our children.<br>For justice.<br>For Uganda.</p>
+                <p><em>“If you want to go fast, go alone. If you want to go far, go together.” — African Proverb</em></p>
+            </div>
+
+            <h3>Other News</h3>
+            <ul>
+                <li>P7 pupils score 70% Division I in National Exams — <em>March 2023</em></li>
+                <li>School wins Kampala Interschool Drama Festival — <em>February 2022</em></li>
+                <li>Seeking to build a computer lab building with support from Friends and well wishers — <em>To be launched in January 2027</em></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mulago Bright Standard Primary School. Founded in 1998 by Mr. & Mrs. Mukose.</p>
+        <p>“Educating Hearts, Enlightening Minds, Empowering Futures.”</p>
+    </footer>
 
 </body>
 </html>
-
-
-
