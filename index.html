@@ -204,6 +204,63 @@
             </div>
         </section>
 
+        <!-- SPORTS AND DRAMA VIDEOS SECTION -->
+        <section id="sports-videos">
+            <h2>Sports and Drama Videos</h2>
+            <p class="section-subtitle">Watch highlights of our pupils in action — drama, music, and sports activities.</p>
+        
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.youtube.com/embed/BqMHSuuc5Cg?rel=0" 
+                        title="Sports and Drama Highlight 1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p class="video-caption">Fun Day at School</p>
+                </div>
+        
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0" 
+                        title="Sports and Drama Highlight 2" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p class="video-caption">Another Highlight</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Add this CSS inside your <style> -->
+        <style>
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+        
+            .video-item iframe {
+                width: 100%;
+                height: 250px;
+                border-radius: 8px;
+            }
+        
+            .video-caption {
+                text-align: center;
+                margin-top: 8px;
+                font-style: italic;
+                font-size: 14px;
+                color: #333;
+            }
+        </style>
+
+        
         <!-- PARENTS SECTION -->
         <section id="parents">
             <h2>Parents' Section</h2>
@@ -370,6 +427,7 @@
 
 </body>
 </html>
+
 
 
 
